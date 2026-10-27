@@ -25,7 +25,7 @@ user-invocable: false
 3. 启动：
 
 ```bash
-python skills/patent-map/tools/serve_map.py
+uv run python skills/patent-map/tools/serve_map.py
 ```
 
 stdout 机读前缀：`MAP_URL:` / `MAP_PORT:` / `MAP_VAULT:` / `MAP_SOURCE:` / `MAP_CACHE:` / `MAP_MODEL:`。端口由系统随机分配（`127.0.0.1:0`）。对话里把 URL 发给用户。
@@ -36,10 +36,10 @@ stdout 机读前缀：`MAP_URL:` / `MAP_PORT:` / `MAP_VAULT:` / `MAP_SOURCE:` / 
 
 ```bash
 pip install -r skills/patent-map/tools/requirements.txt
-python skills/patent-map/tools/ensure_model.py
+uv run python skills/patent-map/tools/ensure_model.py
 ```
 
-单独拷走本包时：`python tools/serve_map.py`。
+单独拷走本包时：`uv run python tools/serve_map.py`。
 
 ## 护栏
 

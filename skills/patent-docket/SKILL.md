@@ -45,9 +45,9 @@ user-invocable: false
 轮次上限 **`config.yaml` 的 `max_rounds`（默认 3）**，细则 `references/max_rounds.md`。从零：首套交底 + 首套申请记为第 1 轮。之后每「分诊 → 派工 → 再出申请并核清单」加 1 轮。第 3 轮结束后必须停。
 
 ```bash
-python skills/patent-docket/tools/init_docket.py --case-id 案件slug --mode from_zero
-python skills/patent-docket/tools/validate_docket.py --yaml outputs/docket/案件slug/docket.yaml
-python skills/patent-docket/tools/emit_tracker.py --yaml outputs/docket/案件slug/docket.yaml
+uv run uv run python skills/patent-docket/tools/init_docket.py --case-id 案件slug --mode from_zero
+uv run python skills/patent-docket/tools/validate_docket.py --yaml outputs/docket/案件slug/docket.yaml
+uv run python skills/patent-docket/tools/emit_tracker.py --yaml outputs/docket/案件slug/docket.yaml
 ```
 
 机读前缀：`DOCKET_DIR:` / `DOCKET_YAML:` / `DOCKET_OK:` / `DOCKET_ERROR:`。

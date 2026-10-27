@@ -28,7 +28,7 @@ user-invocable: false
 2. 缺 `claim_features.json` 或对照专利的 `description_paragraphs.json` → **`Read` `skills/patent-reader/SKILL.md`**。对照表只要这两份文件（从属权也拆进特征行）。不写通俗笔记、不入库、不裁附图。全文 PDF 用解读包 `fetch_patent_pdf.py`。下不来就请用户给 PDF。
 3. 用户允许补 D 且有空格 → **`Read` `skills/patent-search/SKILL.md`**，再按其 `covers_rank.md` 出旁路
 4. `prompts/fill_chart.md` 填格（跨列同色、书面对应说明、完整摘录）
-5. `python skills/patent-chart/tools/emit_chart.py --json <payload.json> --into <INTAKE_DIR>`
+5. `uv run python skills/patent-chart/tools/emit_chart.py --json <payload.json> --into <INTAKE_DIR>`
 6. 交付末块 **`Read` `prompts/delivery_confirm.md`**
 
 ## 护栏

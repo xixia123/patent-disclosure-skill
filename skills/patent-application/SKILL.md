@@ -27,7 +27,7 @@ user-invocable: false
 5. 外观：先 `Read` `references/design_view_cnipa.md`，只走 `design_application.md`；跑本包 `check_design_views.py`
 6. 本包 `tools/emit_application_docx.py` 出 Word；**`Read`** `issues.md`，写 `问题清单.md`（不入正式文件），并在**同一条交付回复**末块 **`## 交付后请确认`** 给出路径、摘要条目、请用户先看清单
 
-整仓路径：`python skills/patent-application/tools/…`。
+整仓路径：`uv run python skills/patent-application/tools/…`。
 
 ## 护栏
 

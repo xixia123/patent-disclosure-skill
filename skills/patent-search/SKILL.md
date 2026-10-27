@@ -25,13 +25,13 @@ user-invocable: false
 填表语法跟公布站高级查询说明走，**按字段区分**，不要混用（细则见 `prompts/patent_search.md`）。
 
 ```bash
-python skills/patent-search/tools/cnipa_search.py --inventor "姓名" --applicant "单位"
-python skills/patent-search/tools/cnipa_search.py --title "数据处理" --abstract "吸附 and 再生" --class B01J20 --max-pages 2
-python skills/patent-search/tools/cnipa_search.py --abstract "折叠 and 杯盖" --type design --derived-from image --type-inferred --derived-note "折叠杯盖"
-python skills/patent-search/tools/cnipa_search.py --inventor "姓名" --complete
+uv run python skills/patent-search/tools/cnipa_search.py --inventor "姓名" --applicant "单位"
+uv run python skills/patent-search/tools/cnipa_search.py --title "数据处理" --abstract "吸附 and 再生" --class B01J20 --max-pages 2
+uv run python skills/patent-search/tools/cnipa_search.py --abstract "折叠 and 杯盖" --type design --derived-from image --type-inferred --derived-note "折叠杯盖"
+uv run python skills/patent-search/tools/cnipa_search.py --inventor "姓名" --complete
 ```
 
-单独拷走本包时：`python tools/cnipa_search.py …`。改版式只动 `tools/emit_search_report.py`。机读前缀：`EPUB_SEARCH_MD:` / `EPUB_SEARCH_JSON:` / `EPUB_SEARCH_NOTE:` / `EPUB_SEARCH_INCOMPLETE:`。对话里给出 Markdown 路径。
+单独拷走本包时：`uv run python tools/cnipa_search.py …`。改版式只动 `tools/emit_search_report.py`。机读前缀：`EPUB_SEARCH_MD:` / `EPUB_SEARCH_JSON:` / `EPUB_SEARCH_NOTE:` / `EPUB_SEARCH_INCOMPLETE:`。对话里给出 Markdown 路径。
 
 ## 护栏
 

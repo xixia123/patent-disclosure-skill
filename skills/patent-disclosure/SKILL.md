@@ -41,9 +41,9 @@ user-invocable: false
 围栏：Step 8 之后只在交付回复 **`## 交付后请确认`** 第 3 条询问。口径见 `prompts/fence/guardrails.md`。立项说明直接写 `outputs/{案件}/fence/专利布局.md`（章节见 `prompts/fence/plan.md`），`family.yaml` 只供校验和分件。弱校验表 `references/scorecards/gbt42748_fence.yaml`。口头确认「按 C1、P1 写」后再分件。
 
 ```bash
-python skills/patent-disclosure/tools/fence/check_layout.py --decompose outputs/{案件}/fence/decompose.yaml
-python skills/patent-disclosure/tools/fence/check_layout.py --family outputs/{案件}/fence/family.yaml --matrix outputs/{案件}/fence/matrix.yaml
-python skills/patent-disclosure/tools/fence/check_scorecard.py -i outputs/{案件}/fence/scorecard.yaml --case-dir outputs/{案件}
+uv run python skills/patent-disclosure/tools/fence/check_layout.py --decompose outputs/{案件}/fence/decompose.yaml
+uv run python skills/patent-disclosure/tools/fence/check_layout.py --family outputs/{案件}/fence/family.yaml --matrix outputs/{案件}/fence/matrix.yaml
+uv run python skills/patent-disclosure/tools/fence/check_scorecard.py -i outputs/{案件}/fence/scorecard.yaml --case-dir outputs/{案件}
 ```
 
 ## 护栏

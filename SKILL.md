@@ -73,7 +73,7 @@ skills/patent-exam-policy/        # 政策简报（技能进化为旁路）
 
 - **默认语言**：面向用户的检索清单、交底书、申请文件、案卷 TRACKER、解读和审查答复用简体中文；脚本机读前缀与 JSON 字段名保持稳定。
 - **专利类型**：未显式指定时交底**默认发明**。
-- **解释器**：本技能所有 Python 脚本一律用自带 venv 解释器，禁止裸调 `python` / `python3` / `py`：
+- **解释器**：本技能所有 Python 脚本一律用相对本技能仓库根（本文件所在目录）下的uv创建的虚拟环境解释器，禁止裸调 `python` / `python3` / `py`：
   `.venv\Scripts\python.exe`（下称 `<PY>`，含空格与中文时须加引号）。
 - **脚本路径**：相对本技能仓库根（本文件所在目录）。整仓：`<PY> skills/patent-disclosure/tools/…`。当前工作区不是本仓库时，把技能安装目录接到命令前面（cwd 用工作区根）。单独拷走某一子包时，该包内用 `<PY> tools/…`。路径只写仓库相对路径。子包文档中的裸 `python …` 示例一律按此替换。
 - **用户产出**：只写当前工作区 `outputs/`（解读 `outputs/patent_reader/`，检索 `outputs/patent-search/`，对照表 `outputs/patent-chart/`，政策 `outputs/exam-policy/`，审查答复 `outputs/oa/`，申请文件 `outputs/patent-application/`，案卷 `outputs/docket/`，交底围栏 `outputs/{案件}/fence/`）。调用脚本时 cwd 用工作区根；`-o` / `-w` 用上述相对路径。
